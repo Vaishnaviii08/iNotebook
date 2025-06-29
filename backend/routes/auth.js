@@ -4,9 +4,11 @@ import { body, validationResult } from "express-validator";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import fetchuser from "../middleware/fetchuser.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const router = express.Router();
-const JWT_SECRET = 'HiEveryoneIamVaishnavi';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 //Route 1 : Create a user using: POST "/api/auth/". No login required
 router.post(
