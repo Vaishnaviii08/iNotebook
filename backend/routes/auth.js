@@ -1,6 +1,7 @@
 import express from "express";
 import User from "../models/User.js";
-import { body, validationResult } from "express-validator";
+import pkg from 'express-validator';
+const { body, validationResult } = pkg;
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import fetchuser from "../middleware/fetchuser.js";
