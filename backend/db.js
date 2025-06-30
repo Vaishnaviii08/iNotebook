@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
 dotenv.config();
 
 const mongoURI = process.env.MONGO_URI;
@@ -13,6 +14,6 @@ const connectToMongo = async () => {
         console.error("MongoDB connection error:", error.message);
         process.exit(1); // Exit if can't connect to database
     }
-}
+};
 
-module.exports = connectToMongo;
+export default connectToMongo;
