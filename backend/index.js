@@ -6,6 +6,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
+console.log("MONGO_URI is:", process.env.MONGO_URI);
+
 const port = process.env.PORT || 5000;
 
 connectToMongo();
